@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import breakSchema from "./breakSchema";
+import breakSchema from "./breakSchema.js";
 
 const dailyActivitySchema = mongoose.Schema({
     user: {
@@ -16,10 +16,11 @@ const dailyActivitySchema = mongoose.Schema({
     },
     startTime: {
         type: Date,
+        default : 0
     },
     status: {
         type: String,
-        enum: ['active', 'inactive']
+        enum: ['active', 'inactive','paused']
     },
     numberOfHours: {
         type: Number,

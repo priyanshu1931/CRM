@@ -5,6 +5,9 @@ const noteSchema = mongoose.Schema({
         type: Boolean,
         default: false,
     },
+    reminderTime:{
+        type : Date,
+    },
     message: {
         type: String,
         required: [true, 'Message is required.']

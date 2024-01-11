@@ -19,12 +19,13 @@ const userSchema = mongoose.Schema({
         default: 'agent'
     },
     image: {
-        type: String
+        type: String,
+        default: ''
     },
     leads: [{
         type: mongoose.Schema.ObjectId,
         ref: 'Lead'
-    }]
+    }],
 });
 
 const User = mongoose.model('User', userSchema);

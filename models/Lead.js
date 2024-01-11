@@ -5,6 +5,10 @@ const leadSchema = mongoose.Schema({
         type: String,
         required: [true, "Lead name is required."]
     },
+    user :{
+         type: mongoose.Schema.ObjectId,
+         ref:'User'
+    },
     contact: {
         type: Number,
         required: [true, 'Lead contact is required.']
